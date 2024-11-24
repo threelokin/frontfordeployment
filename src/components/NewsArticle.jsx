@@ -33,7 +33,7 @@ const NewsArticle = React.memo(({
   const isValidImageUrl = article.image_url && !invalidImages.includes(article.image_url);
 
   const trimEnglishText = (text) => {
-    const englishTextRegex = /^[A-Za-z0-9\s.,!?:'-|-]+/;
+    const englishTextRegex = /^[0-9\s.,!?:'-|-]+/;
     const match = text.match(englishTextRegex);
     if (match) {
       return text.slice(match[0].length).trim();
