@@ -18,7 +18,7 @@ const About = () => {
               <li>AI-powered news recommendations</li>
               <li>Real-time updates from trusted sources</li>
               <li>Personalized news feed based on your interests</li>
-              <li>Multi-language support (English and Telugu)</li>
+{/*               <li>Multi-language support (English and Telugu)</li> */}
               <li>User-friendly interface with easy navigation</li>
             </ul>
           </section>
