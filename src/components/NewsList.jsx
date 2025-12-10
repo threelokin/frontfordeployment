@@ -38,11 +38,11 @@ const NewsList = ({ language, onScroll = () => {} }) => {
   useEffect(() => {
     const fetchNews = async () => {
       const baseUrl = usePrimaryApi
-        ? ' https://api.3lok.in/english/news'
-        : ' https://api.3lok.in/english/news';
+        ? ' https://3loknewsbackend.vercel.app/english/news'
+        : ' https://3loknewsbackend.vercel.app/english/news';
       const url = language === 'telugu'
         ? `${baseUrl}`
-        : ' https://api.3lok.in/english/news';
+        : ' https://3loknewsbackend.vercel.app/english/news';
 
       try {
         const nowTime = new Date();
@@ -100,11 +100,11 @@ const NewsList = ({ language, onScroll = () => {} }) => {
 
     setLoading(true);
     const baseUrl = usePrimaryApi
-      ? ` https://api.3lok.in/english/news?page=${nextPage}`
-      : ` https://api.3lok.in/english/news?page=${nextPage}`;
+      ? ` https://3loknewsbackend.vercel.app/english/news?page=${nextPage}`
+      : ` https://3loknewsbackend.vercel.app/english/news?page=${nextPage}`;
     const url = language === 'telugu'
       ? baseUrl
-      : ` https://api.3lok.in/english/news?page=${nextPage}`;
+      : ` https://3loknewsbackend.vercel.app/english/news?page=${nextPage}`;
 
     try {
       const response = await fetch(url);
@@ -133,11 +133,11 @@ const NewsList = ({ language, onScroll = () => {} }) => {
 
     setLoading(true);
     const baseUrl = usePrimaryApi
-      ? ` https://api.3lok.in/english/news?page=${nextPage}`
-      : ` https://api.3lok.in/english/news?page=${nextPage}`;
+      ? ` https://3loknewsbackend.vercel.app/english/news?page=${nextPage}`
+      : ` https://3loknewsbackend.vercel.app/english/news?page=${nextPage}`;
     const url = language === 'telugu'
       ? baseUrl
-      : ` https://api.3lok.in/english/news?page=${nextPage}`;
+      : ` https://3loknewsbackend.vercel.app/english/news?page=${nextPage}`;
 
     try {
       const response = await fetch(url);
@@ -297,3 +297,4 @@ const NewsList = ({ language, onScroll = () => {} }) => {
 };
 
 export default NewsList;
+
