@@ -38,7 +38,7 @@ const NewsList = ({ language, onScroll = () => {} }) => {
   useEffect(() => {
     const fetchNews = async () => {
       const baseUrl = usePrimaryApi
-        ? ' https://3loknewsbackend.vercel.app/english/news'
+        ? ' https://3loknewsbackend.vercel.app/telugu/news'
         : ' https://3loknewsbackend.vercel.app/english/news';
       const url = language === 'telugu'
         ? `${baseUrl}`
@@ -297,4 +297,5 @@ const NewsList = ({ language, onScroll = () => {} }) => {
 };
 
 export default NewsList;
+
 
