@@ -41,7 +41,7 @@ const SearchResults = () => {
 
   const fetchResults = async (query, category, page = null) => {
     setLoading(true);
-    const baseUrl = ` https://api.3lok.in/search?language=${languageCode}`;
+    const baseUrl = ` https://3loknewsbackend.vercel.app/search?language=${languageCode}`;
     const url = page
       ? query
         ? `${baseUrl}&q=${encodeURIComponent(query)}&page=${page}`
@@ -144,3 +144,4 @@ const SearchResults = () => {
 };
 
 export default SearchResults;
+
