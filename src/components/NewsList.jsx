@@ -100,8 +100,8 @@ const NewsList = ({ language, onScroll = () => {} }) => {
 
     setLoading(true);
     const baseUrl = usePrimaryApi
-      ? ` https://3loknewsbackend.vercel.app/english/news?page=${nextPage}`
-      : ` https://3loknewsbackend.vercel.app/english/news?page=${nextPage}`;
+      ? ` https://3loknewsbackend.vercel.app/telugu/news?page=${nextPage}`
+      : ` https://3loknewsbackend.vercel.app/telugu/news?page=${nextPage}`;
     const url = language === 'telugu'
       ? baseUrl
       : ` https://3loknewsbackend.vercel.app/english/news?page=${nextPage}`;
@@ -297,5 +297,6 @@ const NewsList = ({ language, onScroll = () => {} }) => {
 };
 
 export default NewsList;
+
 
 
