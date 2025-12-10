@@ -133,8 +133,8 @@ const NewsList = ({ language, onScroll = () => {} }) => {
 
     setLoading(true);
     const baseUrl = usePrimaryApi
-      ? ` https://3loknewsbackend.vercel.app/english/news?page=${nextPage}`
-      : ` https://3loknewsbackend.vercel.app/english/news?page=${nextPage}`;
+      ? ` https://3loknewsbackend.vercel.app/telugu/news?page=${nextPage}`
+      : ` https://3loknewsbackend.vercel.app/telugu/news?page=${nextPage}`;
     const url = language === 'telugu'
       ? baseUrl
       : ` https://3loknewsbackend.vercel.app/english/news?page=${nextPage}`;
@@ -208,13 +208,13 @@ const NewsList = ({ language, onScroll = () => {} }) => {
       let audioBlob;
 
       if (language === 'telugu') {
-        // const encodedText = encodeURIComponent(textToSpeak);
-        // const apiUrl = `https://ttsfornews.vercel.app/tts?text=${encodedText}`;
+        const encodedText = encodeURIComponent(textToSpeak);
+        const apiUrl = `https://ttsfornews.vercel.app/tts?text=${encodedText}`;
 
-        // const response = await fetch(apiUrl);
-        // if (!response.ok) throw new Error('Failed to fetch TTS audio');
-        // audioBlob = await response.blob();
-           const apiUrl = 'https://ttsenglish.vercel.app/english';
+        const response = await fetch(apiUrl);
+        if (!response.ok) throw new Error('Failed to fetch TTS audio');
+        audioBlob = await response.blob();
+           // const apiUrl = 'https://ttsenglish.vercel.app/english';
         const response = await fetch(apiUrl, {
           method: 'POST',
           headers: {
@@ -297,6 +297,7 @@ const NewsList = ({ language, onScroll = () => {} }) => {
 };
 
 export default NewsList;
+
 
 
 
